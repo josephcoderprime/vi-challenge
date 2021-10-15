@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+    <link rel="stylesheet" href="/build/vi-challenge.css">
+    <script type="module" src="/build/vi-challenge.esm.js"></script>
+    <script nomodule src="/build/vi-challenge.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+      <h1><span>┃</span>Cta - Main conversion</h1>
+      </div>
+      <div class="square"></div>
+      <div class="square1"></div>
+      <h3>Contact US</h3>
+      <h2>A wonderful serenity has <br>
+        taken possession</br></h2>
+      <vi-button id="open-modal" text="Serenity" appearance="primary"></vi-button>
+      <vi-modal buttons='[{"text": "Confirm"},{"text": "Cancel"}]' header="Serenity" appearance="primary">
+        <p>
+          God, grant me the serenity to accept the things I cannot change, the courage to change the things I can, and the wisdom to know the difference.
+          Living one day at a time, enjoying one moment at a time; accepting hardship as a pathway to peace; taking, as Jesus did, this sinful world as it is, not as I would have it; trusting that You will make all things right
+          if I surrender to Your will; so that I may be reasonably happy in this life and supremely happy with You forever in the next.
+          Amen.
+        </p>
+      </vi-modal>
+      </div>
+    </div>
+  </div>
+ </body>
+
+<script>
+  var button = document.querySelector('#open-modal');
+  var modal = document.querySelector('vi-modal');
+
+  button.addEventListener('click', function () {
+    modal.isopen = true;
+  });
+</script>
+</html>
